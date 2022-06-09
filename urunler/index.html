@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="big-screen">
+            <img src="asset/img/c1.jpg">
+        </div>
+        <div class="slides">
+            <img class="sekil" src="asset/img/a1.jpg">
+            <img class="sekil" src="asset/img/b1.jpg">
+            <img class="sekil" src="asset/img/c1.jpg">
+            <img class="sekil" src="asset/img/d1.jpg">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+     $(document).ready(function(){
+         $('.container .slides > img').mouseover(function(){
+             var $smallimages = $(this).attr('src');
+             $('.big-screen > img').attr('src',$smallimages);
+         })
+     
+         $('.big-screen > img').mouseover(function(){
+
+         })
+        })
+
+    </script>
+
+</body>
+</html>
